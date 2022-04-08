@@ -17,7 +17,6 @@ YEAR := 2023
 YR   := $(shell printf ${YEAR} | cut -c 3-)
 
 upgrade:
-	echo ${YR}
 	curl -LO https://asplos-conference.org/wp-content/uploads/${YEAR}/asplos${YR}-templates.zip
 	unzip -o asplos${YR}-templates.zip asplos${YR}-templates/jpaper.cls
 	cp asplos${YR}-templates/jpaper.cls jpaper.cls
